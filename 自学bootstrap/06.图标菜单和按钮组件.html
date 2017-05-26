@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图标菜单和按钮组件</title>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> 文件可能有错
+	可以直接连接到网上，如下-->
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 第一个参数：width=device-width，以设备的宽度为宽度。第二个参数：initial-scale=1,百分百缩放。第三个参数：最大的缩放，也是百分百。第四个参数：禁止用户缩放 。做响应式时，加上这句话。-->
+	<style>
+		 .a{height:50px;width:50px;border:1px solid #ccc;background-color:#eee;}
+	</style>
+</head>
+<body style="margin:50px;">
+   
+    <!-- 导航图标 -->
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Project name</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#"><span class="glyphicon glyphicon-home">Home</span></a></li>
+				<li><a href="#shop"><span class="glyphicon glyphicon-shopping-cart">Shop</span></a></li>
+				<li><a href="#support"><span class="glyphicon glyphicon-headphones">Support</span></a></li>
+			</ul>
+		</div><!-- /.nav-collapse -->
+	</div><!-- /.container -->
+</div>
+<br>
+<br>
+<br>
+	<i class="glyphicon glyphicon-star"></i>
+   <span class="glyphicon glyphicon-search"></span>
+   <!-- 结合按钮 -->
+	<button class="btn btn-default byn-lg">
+		<i class="glyphicon glyphicon-star"></i>
+	</button>
+	<p>
+	<button type="button" class="btn btn-default">
+		<span class="glyphicon glyphicon-sort-by-attributes"></span>
+	</button>
+	<button type="button" class="btn btn-default">
+		<span class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+	</button>
+	<button type="button" class="btn btn-default">
+		<span class="glyphicon glyphicon-sort-by-order"></span>
+	</button>
+	<button type="button" class="btn btn-default">
+		<span class="glyphicon glyphicon-sort-by-order-alt"></span>
+	</button>
+	</p>
+	<button type="button" class="btn btn-default btn-lg">
+		<span class="glyphicon glyphicon-user"></span> User
+	</button>
+	<p></p>
+	<p>文本阴影</p>
+	<button type="button" class="btn btn-primary btn-lg" style="text-shadow: black 5px 3px 3px;">
+  	<span class="glyphicon glyphicon-user"></span> User
+	</button>
+	<br>
+	<p>下拉菜单</p>
+	<div class="dropdown">
+		<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
+				data-toggle="dropdown">
+			主题
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		 <!-- pull-right向右对齐菜单 -->
+		 	<li role="presentation" class="dropdown-header">下拉菜单标题</li>
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">Java</a>
+			</li>
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+			</li>
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+			</li>
+			<li role="presentation" class="divider"></li><!-- 分离线 -->
+			<li role="presentation" class="dropdown-header">下拉菜单标题</li>
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+			</li>
+		</ul>
+	</div>
+    <!-- 可以添加标题dropdown-header -->
+
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

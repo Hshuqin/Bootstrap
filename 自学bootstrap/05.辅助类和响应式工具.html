@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>辅助类和响应式工具</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 第一个参数：width=device-width，以设备的宽度为宽度。第二个参数：initial-scale=1,百分百缩放。第三个参数：最大的缩放，也是百分百。第四个参数：禁止用户缩放 。做响应式时，加上这句话。-->
+	<style>
+		 .a{height:50px;width:50px;border:1px solid #ccc;background-color:#eee;}
+	</style>
+</head>
+<body style="margin:50px;">
+	<!-- 情景文本颜色：各种色调的字体 -->
+	<p class="text-muted">BootStrap 视频教程</p> <!-- 柔和灰 -->
+	<p class="text-primary">BootStrap 视频教程</p><!-- 主要蓝 -->
+	<p class="text-success">BootStrap 视频教程</p><!-- 成功绿 -->
+	<p class="text-info">BootStrap 视频教程</p><!-- 信息蓝 -->
+	<p class="text-warning">BootStrap 视频教程</p><!-- 警告黄 -->
+	<p class="text-danger">BootStrap 视频教程</p><!-- 危险红 -->
+	<button class="close">&times;</button> <!-- 关闭的按钮，在右上角 -->
+	<span class="caret"></span><!-- 小三角 -->
+	<br>
+	<div class="pull-left a">左边</div> 
+	<div class="pull-right a">右边</div>
+	<!-- 快速浮动：这个浮动其实就是float，只不过使用例如！important 加强了优先级 -->
+	<div class="center-block a">居中</div>
+	<!-- 就是margin：x auto；并且设置了display:block; -->
+	<div class="pull-left a">左边</div> 
+	<div class="clearfix"></div>
+	<div class="a">右边</div>
+	<!-- 清理浮动：这个div可以放在需要清理浮动区块的前面即可 -->
+	<div class="show">show</div>
+	<div class="hidden">hidden</div>
+
+	<div class="visible-xs-block a">超小屏幕激活显示</div>
+	<div class="hidden-xs a">超小屏幕激活影藏</div>
+</body>
+</html>

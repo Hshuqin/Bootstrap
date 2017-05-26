@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分页标签和徽章</title>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> 文件可能有错
+	可以直接连接到网上，如下-->
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 第一个参数：width=device-width，以设备的宽度为宽度。第二个参数：initial-scale=1,百分百缩放。第三个参数：最大的缩放，也是百分百。第四个参数：禁止用户缩放 。做响应式时，加上这句话。-->
+	<style>
+		 .a{height:50px;width:50px;border:1px solid #ccc;background-color:#eee;}
+	</style>
+</head>
+<body style="margin:50px;">
+<!-- 分页 .pager 一个简单的分页链接，链接居中对齐。-->
+<ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+</ul>
+<br>
+<ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li class="disabled"><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+</ul>
+<ul class="pagination pagination-lg"><!-- lg sm  md  xs -->
+<li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+</ul><br>
+<!-- 翻页 -->
+<ul class="pager">
+    <li><a href="#">Previous</a></li>
+    <li><a href="#">Next</a></li>
+</ul>
+<ul class="pager">
+    <li class="previous"><a href="#">&larr; Older</a></li>
+    <li class="next"><a href="#">Newer &rarr;</a></li>
+</ul>
+<!-- Bootstrap 标签。标签可用于计数、提示或页面上其他的标记显示。使用 class .label 来显示标签 -->
+
+<h1>Example Heading <span class="label label-default">Label</span></h1>
+<h2>Example Heading <span class="label label-default">Label</span></h2>
+<h3>Example Heading <span class="label label-default">Label</span></h3>
+<h4>Example Heading <span class="label label-default">Label</span></h4>
+<br>
+
+<span class="label label-default">默认标签</span>
+<span class="label label-primary">主要标签</span>
+<span class="label label-success">成功标签</span>
+<span class="label label-info">信息标签</span>
+<span class="label label-warning">警告标签</span>
+<span class="label label-danger">危险标签</span>
+
+
+ <!-- Bootstrap 徽章（Badges）。徽章与标签相似，主要的区别在于徽章的边角更加圆滑。
+徽章（Badges）主要用于突出显示新的或未读的项。如需使用徽章，只需要把 <span class="badge"> 添加到链接、Bootstrap 导航等这些元素上即可 -->
+
+<a href="#">Mailbox <span class="badge">50</span></a>
+
+<div class="container">
+    <h2>徽章</h2>
+    <p>.badge 类指定未读消息的数量:</p>
+    <p><a href="#">收件箱 <span class="badge">21</span></a></p>
+</div>
+
+<h4>胶囊式导航中的激活状态</h4>
+<ul class="nav nav-pills">
+    <li class="active">
+        <a href="#">首页
+            <span class="badge">42</span>
+        </a>
+    </li>
+    <li>
+        <a href="#">简介</a>
+    </li>
+    <li>
+        <a href="#">消息
+            <span class="badge">3</span>
+        </a>
+    </li>
+</ul>
+<br>
+<h4>列表导航中的激活状态</h4>
+<ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+    <li class="active">
+        <a href="#">
+            <span class="badge pull-right">42</span>首页</a>
+        </li>
+    <li>
+        <a href="#">简介</a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="badge pull-right">3</span>消息
+        </a>
+    </li>
+</ul>
+
+
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

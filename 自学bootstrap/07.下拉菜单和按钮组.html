@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单和按钮组</title>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> 文件可能有错
+	可以直接连接到网上，如下-->
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 第一个参数：width=device-width，以设备的宽度为宽度。第二个参数：initial-scale=1,百分百缩放。第三个参数：最大的缩放，也是百分百。第四个参数：禁止用户缩放 。做响应式时，加上这句话。-->
+	<style>
+		 .a{height:50px;width:50px;border:1px solid #ccc;background-color:#eee;}
+	</style>
+</head>
+<body style="margin:50px;">
+	<p>下拉菜单</p>
+	<div class="dropdown">
+		<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
+				data-toggle="dropdown">
+			主题
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		 <!-- pull-right向右对齐菜单 -->
+		 	<li role="presentation" class="dropdown-header">下拉菜单标题</li>
+			<li role="presentation">
+				<a role="menuitem" class="disabled" tabindex="-1" href="#">Java</a>
+				<!-- class="disabled"禁用项 -->
+			</li>
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+			</li>
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+			</li>
+			<li role="presentation" class="divider"></li><!-- 分离线 -->
+			<li role="presentation" class="dropdown-header">下拉菜单标题</li>
+			<li role="presentation">
+				<a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 按钮组 和下拉菜单的结合 默认水平-->
+	<div class="btn-group">
+	    <button type="button" class="btn btn-default">按钮 1</button>
+	    <button type="button" class="btn btn-default">按钮 2</button>
+
+	    <div class="btn-group">
+		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		        下列
+		        <span class="caret"></span>
+		    </button>
+		    <ul class="dropdown-menu">
+		        <li><a href="#">下拉链接 1</a></li>
+		        <li><a href="#">下拉链接 2</a></li>
+		    </ul>
+	    </div>
+	</div>
+		<!-- 垂直 -->
+		<br>
+			<br>
+	<div class="btn-group-vertical">
+	    <button type="button" class="btn btn-default">按钮 1</button>
+	    <button type="button" class="btn btn-default">按钮 2</button>
+	    <div class="btn-group-vertical">
+		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		        下拉
+		        <span class="caret"></span>
+		    </button>
+		    <ul class="dropdown-menu">
+		        <li><a href="#">下拉链接 1</a></li>
+		        <li><a href="#">下拉链接 2</a></li>
+		    </ul>
+	    </div>
+	</div>
+	
+	<!-- 按钮和下拉菜单 -->
+	<!-- 按钮下拉菜单的大小使用带有各种大小按钮的下拉菜单：.btn-large、.btn-sm 或 .btn-xs。 -->
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle btn-lg" data-toggle="dropdown">默认
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li>
+            <a href="#">功能</a>
+        </li>
+        <li>
+            <a href="#">另一个功能</a>
+        </li>
+        <li>
+            <a href="#">其他</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="#">分离的链接</a>
+        </li>
+    </ul>
+</div>
+<div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown">原始
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li>
+            <a href="#">功能</a>
+        </li>
+        <li>
+            <a href="#">另一个功能</a>
+        </li>
+        <li>
+            <a href="#">其他</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="#">分离的链接</a>
+        </li>
+    </ul>
+</div>
+<div class="btn-group">
+    <button type="button" class="btn btn-success dropdown-toggle btn-xs" data-toggle="dropdown">成功
+        <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+        <li>
+            <a href="#">功能</a>
+        </li>
+        <li>
+            <a href="#">另一个功能</a>
+        </li>
+        <li>
+            <a href="#">其他</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="#">分离的链接</a>
+        </li>
+    </ul>
+</div>
+
+<!-- 按钮上拉菜单菜单也可以往上拉伸的，只需要简单地向父 .btn-group 容器添加 .dropup 即可。 -->
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">默认
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li>
+                <a href="#">功能</a>
+            </li>
+            <li>
+                <a href="#">另一个功能</a>
+            </li>
+            <li>
+                <a href="#">其他</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">分离的链接</a>
+            </li>
+        </ul>
+    </div>
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">原始
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li>
+                <a href="#">功能</a>
+            </li>
+            <li>
+                <a href="#">另一个功能</a>
+            </li>
+            <li>
+                <a href="#">其他</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">分离的链接</a>
+            </li>
+        </ul>
+    </div>
+	
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹出框与警告框</title>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> 文件可能有错
+	可以直接连接到网上，如下-->
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 第一个参数：width=device-width，以设备的宽度为宽度。第二个参数：initial-scale=1,百分百缩放。第三个参数：最大的缩放，也是百分百。第四个参数：禁止用户缩放 。做响应式时，加上这句话。-->
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		img{height:100px;width:100px;}
+	</style>
+</head>
+<body style="margin:50px;">
+<!-- 警告框 -->
+<div id="myAlert" class="alert alert-success">
+	<a href="#" class="close" data-dismiss="alert">&times;</a>
+	<strong>成功！</strong>结果是成功的。
+</div>
+<!-- 弹出框 -->
+<div class="container" style="padding: 100px 50px 10px;" >
+    <button type="button" class="btn btn-default popover-show"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="left"
+            data-content="左侧的 Popover 中的一些内容 —— show 方法">
+        左侧的 Popover
+    </button>
+    <button type="button" class="btn btn-primary popover-hide"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="top"
+            data-content="顶部的 Popover 中的一些内容 —— hide 方法">
+        顶部的 Popover
+    </button>
+    <button type="button" class="btn btn-success popover-destroy"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="bottom"
+            data-content="底部的 Popover 中的一些内容 —— destroy 方法">
+        底部的 Popover
+    </button>
+    <button type="button" class="btn btn-warning popover-toggle"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="right"
+            data-content="右侧的 Popover 中的一些内容 —— toggle 方法">
+        右侧的 Popover
+    </button><br><br><br><br><br><br>
+    <p class="popover-options">
+        <a href="#" type="button" class="btn btn-warning" title="<h2>Title</h2>"
+           data-container="body" data-toggle="popover" data-content="
+         <h4>Popover 中的一些内容 —— options 方法</h4>">
+            Popover
+        </a>
+    </p>
+    <script type="text/javascript">
+		$(function () { $('.popover-show').popover('show');});
+        $(function () { $('.popover-hide').popover('hide');});
+        $(function () { $('.popover-destroy').popover('destroy');});
+        $(function () { $('.popover-toggle').popover('toggle');});
+        $(function () { $(".popover-options a").popover({html : true });});
+</script>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+	$("#myAlert").bind('closed.bs.alert', function () {
+		alert("警告消息框被关闭。");
+	});
+});
+</script>  
+
+</body>
+</html>

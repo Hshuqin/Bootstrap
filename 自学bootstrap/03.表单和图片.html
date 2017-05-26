@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单和图片</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body style="margin:50px;">
+	
+	<!-- <form class="form-inline">  内联表单样式，居于一行，响应式布局 -->
+	<form class="form-horizontal">
+		<div class="form-group">  <!-- 群组关系 -->
+			<label class="col-sm-2 control-label">电子邮件</label>
+			<!-- control-label 同步form的css样式-->
+			<div class="col-sm-10">  
+			<input type="email" class="form-control" placeholder="请输入你的电子邮件">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">密码</label>
+			<div class="col-sm-10">  
+			<input type="password" class="form-control" placeholder="请输入你的密码">
+			</div>
+		</div>
+		<div class="input-group">
+			<div class="input-group-addon">￥</div>
+			<input type="text" class="form-control" placeholder="请输入你的价格">
+			<div class="input-group-addon">.00</div>
+		</div>
+
+
+		<!-- 复选框 -->
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">体育
+			</label>
+		</div>
+		<div class="checkbox disabled">
+		<!-- 整个div都禁用 -->
+			<label>
+				<input type="checkbox" disabled>音乐
+				<!-- iuput禁用 -->
+			</label>
+		</div>
+
+
+
+		<label class="checkbox-inline"> <!-- 内联样式 -->
+			<input type="checkbox">体育
+		</label>
+		<label class="checkbox-inline">
+			<input type="checkbox" disabled>音乐
+		</label>
+
+		<label class="radio-inline disable">
+			<input type="radio" disabled>男
+		</label>
+		<label class="radio-inline disable">
+			<input type="radio" disabled>女
+		</label>
+
+		<select class="form-control">  <!-- 下拉框 -->
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+		</select>
+
+		<!-- 校验状态 -->
+		<!-- has-success,has-error,has-warning -->
+
+		<!-- 添加额外的图标 -->
+		<!-- glyphicon-ok成功状态，glyphicon-warning-sign警告,glyphicon-remove错误状态 -->
+
+		<form class="form-horizontal">
+		<div class="form-group has-success has-feedback">  <!-- 群组关系 -->
+			<label class="control-label">电子邮件</label>
+			<!-- control-label 同步form的css样式-->
+			<input type="email" class="form-control" placeholder="请输入你的电子邮件">
+			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+			<!-- 图标引入不成功 -->
+		</div>
+		</form>
+	</form>
+
+
+
+	<img src="img/1.jpg" alt="tupian" class="img-rounded img-responsive" style="width:400px;height:400px">
+	<img src="img/1.jpg" alt="tupian" class="img-circle img-responsive" style="width:100px;height:100px">
+	<img src="img/1.jpg" alt="tupian" class="img-thumbnail img-responsive" style="width:100px;height:100px"> 
+	<img src="img/1.jpg" alt="tupian" class="img-circle img-responsive" style="width:100px;height:100px;"> <!-- 缩略图
+	img-responsive响应式图片
+	 -->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

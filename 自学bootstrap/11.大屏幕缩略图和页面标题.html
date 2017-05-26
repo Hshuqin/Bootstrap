@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大屏幕缩略图和标题</title>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> 文件可能有错
+	可以直接连接到网上，如下-->
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 第一个参数：width=device-width，以设备的宽度为宽度。第二个参数：initial-scale=1,百分百缩放。第三个参数：最大的缩放，也是百分百。第四个参数：禁止用户缩放 。做响应式时，加上这句话。-->
+</head>
+<body style="margin:50px;">
+	
+<div class="container">
+   <div class="jumbotron">
+        <h1>欢迎登陆页面！</h1>
+        <p>这是一个超大屏幕（Jumbotron）的实例。</p>
+        <p><a class="btn btn-primary btn-lg" role="button">
+        学习更多</a>
+      </p>
+   </div>
+</div>
+<!-- 占用全部宽度且不带圆角的超大屏幕，在所有的 .container class 外使用 .jumbotron class -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>欢迎登陆页面！</h1>
+        <p>这是一个超大屏幕（Jumbotron）的实例。</p>
+        <p><a class="btn btn-primary btn-lg" role="button">
+         学习更多</a>
+        </p>
+    </div>
+</div>
+<!-- 页面标题 -->
+
+<div class="page-header">
+    <h1>页面标题实例
+        <small>子标题</small>
+    </h1>
+</div>
+<p>这是一个示例文本。这是一个示例文本。这是一个示例文本。这是一个示例文本。这是一个示例文本。</p>
+
+<!-- 缩略图 ,
+    在图像周围添加带有 class .thumbnail 的 <a> 标签。
+    这会添加四个像素的内边距（padding）和一个灰色的边框。
+    当鼠标悬停在图像上时，会动画显示出图像的轮廓。
+ -->
+
+<!--     把带有 class .thumbnail 的 <a> 标签改为 <div>。
+    在该 <div> 内，您可以添加任何您想要添加的东西。由于这是一个 <div>，我们可以使用默认的基于 span 的命名规则来调整大小。
+    如果您想要给多个图像进行分组，请把它们放置在一个无序列表中，且每个列表项向左浮动。
+ -->
+<div class="row">
+    <div class="col-sm-6 col-md-3">
+         <div class="thumbnail">
+            <img src="img/1.jpg" 
+             alt="通用的占位符缩略图">
+            <div class="caption">
+                <h3>缩略图标签</h3>
+                <p>一些示例文本。一些示例文本。</p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">
+                        按钮
+                    </a> 
+                    <a href="#" class="btn btn-default" role="button">
+                        按钮
+                    </a>
+                </p>
+            </div>
+         </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="img/1.jpg" 
+            alt="通用的占位符缩略图">
+            <div class="caption">
+                <h3>缩略图标签</h3>
+                <p>一些示例文本。一些示例文本。</p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">
+                        按钮
+                    </a> 
+                    <a href="#" class="btn btn-default" role="button">
+                        按钮
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="img/1.jpg"  
+            alt="通用的占位符缩略图">
+            <div class="caption">
+                <h3>缩略图标签</h3>
+                <p>一些示例文本。一些示例文本。</p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">
+                        按钮
+                    </a> 
+                    <a href="#" class="btn btn-default" role="button">
+                        按钮
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img src="img/1.jpg"  
+            alt="通用的占位符缩略图">
+            <div class="caption">
+                <h3>缩略图标签</h3>
+                <p>一些示例文本。一些示例文本。</p>
+                <p>
+                    <a href="#" class="btn btn-primary" role="button">
+                        按钮
+                    </a> 
+                    <a href="#" class="btn btn-default" role="button">
+                        按钮
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

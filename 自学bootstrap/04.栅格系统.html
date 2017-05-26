@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>栅格系统</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 第一个参数：width=device-width，以设备的宽度为宽度。第二个参数：initial-scale=1,百分百缩放。第三个参数：最大的缩放，也是百分百。第四个参数：禁止用户缩放 。做响应式时，加上这句话。-->
+</head>
+<!--  栅格系统中，浏览器会随着屏幕的大小自动分配12列。通过一系列的行与列的组合来创建页面布局。
+1.行必须包含在.container或.container-fluid下，以便为其赋予核实的排列（aligment）和内补（padding）. -->
+<style>
+	 .a{height:50px;border:1px solid #ccc;background-color:#eee;}
+</style>
+<body>
+<div class="container"> <!-- 固定宽度 。container-fluid:100%宽度-->
+	<!-- <div class="row">
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+		<div class="col-md-1 a"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-9 a"></div>
+		<div class="col-md-3 a"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 a"></div>
+		<div class="col-md-3 a"></div>
+		<div class="col-md-3 a"></div>
+		<div class="col-md-3 a"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 a"></div>
+		<div class="col-md-4 a"></div>
+		<div class="col-md-4 a"></div>
+	</div> -->
+	<!-- 超小屏幕 手机（<768px） 总是水平排列 -col-xs-    最大列宽：自动
+		 小屏幕 平板（>=768px） -col-sm-                  最大列宽：750px
+		 中等屏幕 桌面显示器（>=992px） -col-md-          最大列宽：970px
+		 大屏幕 大桌面显示器 （>=1200px） -col-lg-        最大列宽：1170px
+		 都可以嵌套，偏移和列排序
+	 -->
+	<div class="row">
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+		<div class="col-la-3 col-md-4 col-sm-6 col-xs-6 a"></div>
+	</div>
+	<p></p>
+	<br>	
+	<br>	
+	<div class="row">	
+		<div class="col-md-8 a">
+		</div>
+		<div class="col-md-3 col-md-offset-1 a">3</div>
+		 <!-- col-md-offset-1 向右偏移1 -->
+	</div>
+	<div class="row">	
+		<div class="col-md-9 a" style="padding:0;"><!-- 有内边距15px -->
+			<div class="col-md-4 a"></div><!-- 嵌套 -->
+			<div class="col-md-4 a"></div>
+			<div class="col-md-4 a"></div>
+			</div>
+		<div class="col-md-3 a">3</div>
+	</div>
+	<div class="row">	 <!-- 交换位置push和pull -->
+		<div class="col-md-9 col-md-push-3 a">9</div>
+		<div class="col-md-3 col-md-pull-9 a">3</div>
+	</div>
+</div>
+	
+</body>
+</html>

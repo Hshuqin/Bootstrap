@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>项目实战之响应式布局设计</title>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> 文件可能有错
+	可以直接连接到网上，如下-->
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="css/index.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"><!-- 第一个参数：width=device-width，以设备的宽度为宽度。第二个参数：initial-scale=1,百分百缩放。第三个参数：最大的缩放，也是百分百。第四个参数：禁止用户缩放 。做响应式时，加上这句话。-->
+	<!-- <style>
+		img{height:100px;width:100px;}
+	</style> -->
+</head>
+<body>
+<nav class="nav navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="index.html" class="navbar-brand" style="padding:0;">
+				<img src="img/3.jpg" style="height:50px;width:80px;margin:auto;">
+				<!-- <span>项目实战</span> -->
+			</a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav navbar-right" style="margin-top:0px;">
+					<li class="active"><a href="index.html"><span class="glyphicon glyphicon-home">首页</span></a></li>
+					<li><a href="information.html"><span class="glyphicon glyphicon-list">资讯</span></a></li>
+					<li><a href="case.html"><span class="glyphicon glyphicon-fire">案例</span></a></li>
+					<li><a href="about.html"><span class="glyphicon glyphicon-question-sign">关于</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<div id="myCarousel" class="carousel slide">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+		<div class="carousel-inner">
+			<div class="item active"><img src="img/1.jpg" alt=""></div>
+			<div class="item"><img src="img/6.jpg" alt=""></div>
+			<div class="item"><img src="img/7.jpg" alt="" ></div>
+		</div>
+		<a href="#myCarousel" data-slide="prev" class="carousel-control left">
+			<span class="glyphicon glyphicon-chevron-left"></span>  <!-- 字体图标，自动识别高度，自动居中 -->
+		</a>
+		<a href="#myCarousel" data-slide="next" class="carousel-control right">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+		<!-- <a href="#myCarousel" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+		<a href="#myCarousel" data-slide="next" class="carousel-control right">&rsaquo;</a> -->
+</div>
+<style>
+	/*body{
+		font-family: "Helvetica  Neue",Helvetica,Arial,"Microsoft Yahei UI" ,"Microsoft Yahei";
+	}
+	#myCarousel{margin:50px 0 0 0;}
+	.tab-h2{
+		font-size: 20px;
+		color:#0059b2;
+		text-align: center;
+		letter-spacing: 1px;
+	}
+	.tab-p{
+		font-size: 15px;
+		text-align: center;
+		letter-spacing: 1px;
+		color:#999;
+		margin:20px 0 40px 0;
+	}
+	.tab1{
+		margin:30px 0;
+		color:#666;
+	}
+	.tab1 .media-heading{
+		margin:5px 0 20px 0;
+	}
+	.tab1 .text-muted{
+		color:#999;
+		text-decoration: line-through;
+	}
+	.tab1 .col{
+		padding:20px;
+	}
+	#footer{
+		padding:20px;
+		text-align: center;
+		background-color:#666;
+		border-top:  1px solid #ccc;
+		color:#eee;
+	}
+	.tab2{background:#eee;padding:60px 20px;text-align: center;}
+	.tab2 img{width:20%height:20%;}
+	.tab3 img{width:50%;height:50%;}
+	.tab3{padding:60px 20px;text-align: center;}
+
+	/*移动设备优先*/
+	.carousel-inner img{margin:0 auto;width:200px;height:150px;}
+	 .tab1 .col .media img{width:100px;height:100px;}
+	 .text h3{font-size:20px;}
+	.text p{font-size:14px;}
+	/*小屏幕（平板，大于等于769px）*/
+	@media(min-width: 768px){
+		.tab-h2{
+			font-size: 26px;
+		}
+		.tab-p{
+			font-size: 16px;
+		}
+		 .carousel-inner img{width:300px;height:200px;}
+		.tab1 .col .media img{width:120px;height:120px;} 
+		.text h3{font-size:22px;}
+		.text p{font-size:15px;}
+		.tab2
+	}
+	/*中屏幕（桌面显示器，大于等于992px）*/
+	@media(min-width: 992px){
+		.tab-h2{
+			font-size: 28px;
+		}
+		.tab-p{
+			font-size: 17px;
+		}
+		 .carousel-inner img{width:400px;height:250px;}
+		.tab1 .col .media img{width:150px;height:150px;} 
+		.text h3{font-size:24px;}
+		.text p{font-size:16px;}
+		.tab2-text{float:left;}
+		.tab2-img{float:right;}
+	}
+	/*大屏幕（大桌面显示器，大于等于1200px）*/
+	@media(min-width: 1200px){
+		.tab-h2{
+			font-size: 30px;
+		}
+		.tab-p{
+			font-size: 18px;
+		}
+		.carousel-inner img{width:600px;height:400px;}
+		.tab1 .col .media img{width:180px;height:180px;}
+		.text h3{font-size:26px;}
+		.text p{font-size:18px;}
+	}
+/*media的设置要在css的样式放在最后*/
+</style>
+<div class="tab1">
+	<div class="container">
+		<h2 class="tab-h2">[为什么选择中国石油大学学习]</h2>
+		<p class="tab-p">强大的师资力量，完美的实战型经营管理课程，实现质的腾飞</p>
+		<div class="row">
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left media-top">
+						<a href="#">
+							<img src="img/3.png" alt="" class="media-object">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">课程内容</h4>
+						<p class="text-muted">其他：高校不知名的讲师编写，没有任何 的实战价值的教材</p>
+						<p>其他：知名的企业家都收到的孙菲菲奋斗的方式发生方式打是打算的撒！</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left media-top">
+						<a href="#">
+							<img src="img/4.png" alt="" class="media-object">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">师资力量</h4>
+						<p class="text-muted">其他：翻跟斗和个和奇偶然奇偶的佛is俄</p>
+						<p>其他：发的方法的暴雨天以后 </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left media-top">
+						<a href="#">
+							<img src="img/5.png" alt="" class="media-object">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">课程安排</h4>
+						<p class="text-muted">其他：阿萨德撒爱上大方的人GV</p>
+						<p>其他：的萨达是对方的施工方的好好发挥 ！</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left media-top">
+						<a href="#">
+							<img src="img/3.png" alt="" class="media-object">
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">服务团队</h4>
+						<p class="text-muted">其他：大师法萨芬撒发生撒暗示法撒旦撒暗室逢灯翻三番</p>
+						<p>其他：知名的企业家都收到的孙菲菲奋斗的方式发生方式打是打算的撒！</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="tab2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 tab2-img">
+				<img src="img/1.png" alt="" class="auto img-responsive center-block">
+			</div>
+			<div class="text col-md-6 col-sm-6 tab2-text">
+				<h3>强大的学习体系</h3>
+				<p>经过管理薛大师层层把关、让你的企业土匪梦境。</p>
+			</div>
+		</div>		
+	</div>
+</div>
+<div class="tab3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 tab3-img">
+				<img src="img/2.png" alt="" class="auto img-responsive center-block">
+			</div>
+			<div class="text col-md-6 col-sm-6 tab3-text">
+				<h3>爱神的箭阿三开发商的</h3>
+				<p>地方撒飞机喀什发犯得上 色打法上空发射发射点阿三方式</p>
+			</div>
+		</div>		
+	</div>
+</div>
+
+<footer id="footer" class="text-muted">
+	<div class="container">
+		<p>企业培训|合作事宜|版权控诉</p>
+		<p>苏ICP 备12345678.@2009-2016 瓢dasdasdasf 是的法式咖啡</p>
+	</div>
+</footer>
+
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//设置垂直居中
+			// $('.carousel-control').css('line-height',$('.carousel-inner img').height()+'px');
+			// $(window).resize(function(){
+			// 	var $height =	$('.carousel-inner img').eq(0).height()||
+			// 					$('.carousel-inner img').eq(1).height()||
+			// 					$('.carousel-inner img').eq(2).height();
+			// 	$('.carousel-control').css('line-height',$height+'px');
+			// });
+			//轮播图自动播放
+			$('#myCarousel').carousel({
+				interval:4000,
+			});
+		});
+		//设置文字垂直居中,谷歌浏览器加载图片的顺序问题，导致高度无法获取
+		// ($('.auto').eq(0).height()-$('text').eq(0).height())/2+'px';
+		$(window).load(function(){
+			$('.text').eq(0).css('margin-top',($('.auto').eq(0).height()-$('text').eq(0).height())/2+'px');
+			$(window).resize(function(){
+				$('.text').eq(0).css('margin-top',($('.auto').eq(0).height()-$('text').eq(0).height())/2+'px');
+		});
+			$('.text').eq(1).css('margin-top',($('.auto').eq(1).height()-$('text').eq(1).height())/2+'px');
+			$(window).resize(function(){
+				$('.text').eq(1).css('margin-top',($('.auto').eq(1).height()-$('text').eq(1).height())/2+'px');
+			});
+		});
+	</script>
+</body>
+</html>
